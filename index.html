@@ -2,61 +2,195 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>豆瓣一刻</title>
-	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-	<!-- build:css ./main.css -->
-	<link rel="stylesheet" href="./public/less/main.css">
-	<link rel="stylesheet" href="./public/less/main.css">
-	<!-- endbuild -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bu偷腥的mao个人博客</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/app-8662bd9f4d.css">
+	
+	<!--[if lt IE 9]>
+	     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	 <![endif]-->
 </head>
-<body ng-app="Yike">
-	<div class="viewport">
-		<!-- 侧边导航 -->
-		<div ng-class="{navs: true, collapse: collapsed}" ng-controller="NavController">
-			<dl>
-				<dt class="login">
-					<div class="avatar">
-						<img src="./public/images/avatar.png" alt="">
-					</div>
-					<span>登录</span>
-				</dt>
-				<dd ng-class="{active: index == key}" ng-repeat="(key, nav) in navs">
-					<a href="{{nav.link}}" ng-click="toggle()" class="{{nav.icon}}">
-						<span>{{nav.text}}</span>
-					</a>
-				</dd>
-			</dl>
-			<div class="extra">
-				<a href="javascript:;" class="icon-image">夜晚</a>
-				<a href="javascript:;" class="icon-download">离线</a>
-			</div>
-		</div>
+<body>
+	<header id="header">
 		<div class="container">
-			<!-- 头部 -->
-			<div ng-class="{header: true, collapse: collapsed}">
-				<a href="javascript:;" ng-click="toggle()" class="menu icon-menu"></a>
-				<h2>{{title}}</h2>
-				<a href="javascript:;" class="search icon-search"></a>
-			</div>
-			<!-- 主体 -->
-			<div ng-class="{body: true, collapse: collapsed}">
-				<div loading class="loading" ng-hide="loaded" src="./public/images/loading.gif"></div>
-				<!-- 占位符 -->
-				<div ng-view></div>
+			<div class="row">	
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				    <span class="sr-only">Toggle navigation</span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="#"></a>
+				</div>
+				<ul class="nav nav-pills">
+				  <li role="presentation" class="active"><a href="#">首页</a></li>
+				  <li role="presentation"><a href="#">前端</a></li>
+				  <li role="presentation"><a href="#">学习</a></li>
+				  <li role="presentation"><a href="#">PPT</a></li>
+				  <li role="presentation"><a href="#">demo</a></li>
+				  <a href="#" class="editor"><i class="glyphicon glyphicon-tags"></i></a>
+				</ul>
+
 			</div>
 		</div>
-	</div>
-	<!-- <script src="./public/libs/toggle.js"></script> -->
-	<!-- build:js ./angular.min.js -->
-	<script src="./bower_components/angular/angular.js"></script>
-	<script src="./bower_components/angular-route/angular-route.js"></script>
-	<!-- endbuild -->
-	<!-- AngularJS入口 -->
-	<script src="./scripts/app.js"></script>
-	<!-- 控制器模块 -->
-	<script src="./scripts/controllers.js"></script>
-	<!-- 指令模块 -->
-	<script src="./scripts/directives.js"></script>
+	</header>
+	
+	<section id="bannar">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1">
+				<table class="table">
+					<tr>
+						<td colspan="2" rowspan="2">
+							<div class="recommend">
+								<img src="./img/1.jpg" alt="大图">
+								<span class="article-bg"></span>
+								<span class="article-title">写一些关于文章标题之类的东西</span>
+							</div>		
+						</td>
+						<td>
+							<div class="recommend">
+								<img src="./img/2.jpg" alt="大图">
+								<span class="article-bg"></span>
+								<span class="article-title">写一些关于文章标题之类的东西</span>
+							</div>
+						</td>
+						<td>
+							<div class="recommend">
+								<img src="./img/3.jpg" alt="大图">
+								<span class="article-bg"></span>
+								<span class="article-title">写一些关于文章标题之类的东西</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="recommend">
+								<img src="./img/4.jpg" alt="大图">
+								<span class="article-bg"></span>
+								<span class="article-title">写一些关于文章标题之类的东西</span>
+							</div>
+						</td>
+						<td>
+							<div class="recommend">
+								<img src="./img/5.jpg" alt="大图">
+								<span class="article-bg"></span>
+								<span class="article-title">写一些关于文章标题之类的东西</span>
+							</div>
+						</td>
+
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section id="web-body">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="title-cpt">
+						阅读&nbsp;|&nbsp;Read
+					</div>
+
+					<div class="media">
+					      <div class="media-body">
+					        <a href="#" class="media-heading">Kindle实用指南</a>
+					        <div class="atrcle-author">By/&nbsp;&nbsp;Bu偷腥的mao</div>
+							<div class="media-content">
+								 旅行，对你来说意味着什么？也许是从朝九晚五的日子中逃离，或者是探索这个世界的一种乐趣。对于《寂静苍穹下》的作者李初初来说，旅行是一次疗伤和救赎——走在路上，放空 
+							</div>
+					      </div>
+					      <div class="media-right">
+					        <a href="#">
+					          <img class="media-object" alt="64x64" src="img/r1.jpg">
+					        </a>
+					      </div>
+					</div>
+					<div class="media">
+					      <div class="media-body">
+					        <a href="#" class="media-heading">Kindle实用指南</a>
+					        <div class="atrcle-author">By/&nbsp;&nbsp;Bu偷腥的mao</div>
+							<div class="media-conten">
+								 旅行，对你来说意味着什么？也许是从朝九晚五的日子中逃离，或者是探索这个世界的一种乐趣。对于《寂静苍穹下》的作者李初初来说，旅行是一次疗伤和救赎——走在路上，放空 
+							</div>
+					      </div>
+					      <div class="media-right">
+					        <a href="#">
+					          <img class="media-object" alt="64x64" src="img/r1.jpg">
+					        </a>
+					      </div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+	<section id="special">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="title-cpt">
+						推荐专题&nbsp;|&nbsp;Hot Subject
+					</div>
+					<div class="special-body">
+						<div class="col-md-3">
+							<div class="sp-container">
+								<img src="">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="sp-container">
+								
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="sp-container">
+								
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="sp-container">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="more-read">
+		<div class="more-botton">
+			<div class="btn-box">查看更多内容</div>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div class="foot-container">
+			<div class="foot-logo">
+			</div>
+			<div class="friend">
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">友情链接</a></li>
+					<li><a href="#">意见反馈</a></li>
+					<li><a href="#">网站说明</a></li>
+				</ul><br/>
+				<!-- <p>All rights reserved © 2016 pianke.me /蜀ICP备12022689号-1</p> -->
+			</div>
+			<div class="other">
+				
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+	<script type="text/javascript" scr="lib/bootstrap/js/bootstrap.js"></script>
+	<script src="js/app-d41d8cd98f.min.js"></script>
 </body>
 </html>
